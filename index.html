@@ -283,7 +283,7 @@
         Kısa formu doldurun, işletmenize özel analiz ve strateji önerisi hazırlayalım.
       </div>
 
-      <form action="https://formspree.io/f/xwvyzklv" method="POST">
+      <form id="contact-form">
         <input type="hidden" name="_subject" value="Yeni Wix Medya Form Başvurusu">
         <input type="hidden" name="_captcha" value="false">
         <div class="form-group">
@@ -322,6 +322,11 @@
         </div>
 
         <div class="form-group">
+          <label>E-Posta Adresiniz</label>
+          <input type="email" name="email" placeholder="ornek@mail.com" required>
+        </div>
+
+        <div class="form-group">
           <label>Telefon Numaranız</label>
           <input type="tel" name="telefon" placeholder="05XX XXX XX XX" required>
         </div>
@@ -342,5 +347,35 @@
   </div>
 </div>
 
+<script>
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch('https://formspree.io/f/xwvyzklv', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      alert('Başvurunuz başarıyla gönderildi!');
+      form.reset();
+    } else {
+      alert('Form gönderilirken bir hata oluştu.');
+    }
+  } catch (error) {
+    alert('Bağlantı hatası oluştu.');
+  }
+});
+</script>
 </body>
 </html>
