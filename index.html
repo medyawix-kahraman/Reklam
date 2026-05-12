@@ -284,15 +284,17 @@
       </div>
 
       <form action="https://formspree.io/f/xwvyzklv" method="POST">
+        <input type="hidden" name="_subject" value="Yeni Wix Medya Form Başvurusu">
+        <input type="hidden" name="_captcha" value="false">
         <div class="form-group">
           <label>İşletme Adınız</label>
-          <input type="text" placeholder="Örn: ABC Mobilya">
+          <input type="text" name="isletme_adi" placeholder="Örn: ABC Mobilya" required>
         </div>
 
         <div class="form-group">
           <label>Faaliyet Gösterdiğiniz Sektör</label>
-          <select>
-            <option>Seçiniz</option>
+          <select name="sektor" required>
+            <option value="">Seçiniz</option>
             <option>Sağlık</option>
             <option>Güzellik Merkezi</option>
             <option>E-Ticaret</option>
@@ -306,8 +308,8 @@
 
         <div class="form-group">
           <label>Şu Anda Aktif Reklam Veriyor Musunuz?</label>
-          <select>
-            <option>Seçiniz</option>
+          <select name="reklam_durumu" required>
+            <option value="">Seçiniz</option>
             <option>Evet</option>
             <option>Daha Önce Verdik</option>
             <option>Hayır</option>
@@ -316,17 +318,17 @@
 
         <div class="form-group">
           <label>Instagram Hesabınız</label>
-          <input type="text" placeholder="@instagramhesabi">
+          <input type="text" name="instagram" placeholder="@instagramhesabi">
         </div>
 
         <div class="form-group">
           <label>Telefon Numaranız</label>
-          <input type="tel" placeholder="05XX XXX XX XX">
+          <input type="tel" name="telefon" placeholder="05XX XXX XX XX" required>
         </div>
 
         <div class="form-group">
           <label>Kısaca Probleminizi Yazın</label>
-          <textarea placeholder="Reklam veriyorum ama dönüşüm alamıyorum..."></textarea>
+          <textarea name="problem" placeholder="Reklam veriyorum ama dönüşüm alamıyorum..."></textarea>
         </div>
 
         <button class="btn" type="submit">Ücretsiz Analiz Başvurusu Yap</button>
