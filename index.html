@@ -1,358 +1,344 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WIX MEDYA | Ücretsiz Reklam Analizi</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family:'Inter',sans-serif;
-      background:#0f172a;
-      color:white;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:30px 15px;
-      overflow-x:hidden;
-    }
-
-    .bg-glow{
-      position:fixed;
-      width:500px;
-      height:500px;
-      background:#ff7a00;
-      filter:blur(160px);
-      opacity:.15;
-      border-radius:50%;
-      top:-120px;
-      right:-120px;
-      z-index:0;
-    }
-
-    .container{
-      width:100%;
-      max-width:720px;
-      position:relative;
-      z-index:2;
-    }
-
-    .card{
-      background:#111827;
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:28px;
-      padding:40px 28px;
-      box-shadow:0 20px 60px rgba(0,0,0,.45);
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:28px;
-    }
-
-    .logo-box{
-      width:54px;
-      height:54px;
-      border-radius:16px;
-      background:linear-gradient(135deg,#ff7a00,#ffb347);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:24px;
-      font-weight:800;
-      color:#0f172a;
-    }
-
-    .logo-text h1{
-      font-size:24px;
-      font-weight:800;
-      line-height:1;
-    }
-
-    .logo-text p{
-      color:#cbd5e1;
-      margin-top:5px;
-      font-size:14px;
-    }
-
-    .hero{
-      margin-bottom:32px;
-    }
-
-    .hero h2{
-      font-size:42px;
-      line-height:1.1;
-      font-weight:800;
-      margin-bottom:18px;
-    }
-
-    .hero h2 span{
-      color:#ff8a1d;
-    }
-
-    .hero p{
-      color:#cbd5e1;
-      line-height:1.7;
-      font-size:16px;
-    }
-
-    .benefits{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:14px;
-      margin-bottom:34px;
-    }
-
-    .benefit{
-      background:#1e293b;
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:18px;
-      padding:16px;
-      display:flex;
-      align-items:flex-start;
-      gap:12px;
-    }
-
-    .check{
-      min-width:32px;
-      min-height:32px;
-      border-radius:10px;
-      background:#ff7a00;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-weight:800;
-    }
-
-    .benefit span{
-      color:#e2e8f0;
-      font-size:15px;
-      line-height:1.5;
-    }
-
-    .form-area{
-      background:#0f172a;
-      border-radius:22px;
-      padding:24px;
-      border:1px solid rgba(255,255,255,.08);
-    }
-
-    .form-title{
-      font-size:24px;
-      font-weight:700;
-      margin-bottom:8px;
-    }
-
-    .form-sub{
-      color:#94a3b8;
-      margin-bottom:24px;
-      line-height:1.6;
-    }
-
-    .form-group{
-      margin-bottom:18px;
-    }
-
-    label{
-      display:block;
-      margin-bottom:8px;
-      font-size:14px;
-      font-weight:600;
-      color:#e2e8f0;
-    }
-
-    input,select,textarea{
-      width:100%;
-      padding:15px 16px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.08);
-      background:#111827;
-      color:white;
-      font-size:15px;
-      outline:none;
-      transition:.2s;
-    }
-
-    input:focus,select:focus,textarea:focus{
-      border-color:#ff7a00;
-      box-shadow:0 0 0 4px rgba(255,122,0,.15);
-    }
-
-    textarea{
-      min-height:110px;
-      resize:vertical;
-    }
-
-    .btn{
-      width:100%;
-      border:none;
-      background:linear-gradient(135deg,#ff7a00,#ff9d3f);
-      color:white;
-      padding:18px;
-      border-radius:16px;
-      font-size:17px;
-      font-weight:700;
-      cursor:pointer;
-      transition:.25s;
-      margin-top:10px;
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 15px 30px rgba(255,122,0,.25);
-    }
-
-    .footer-note{
-      text-align:center;
-      margin-top:18px;
-      color:#94a3b8;
-      font-size:13px;
-      line-height:1.6;
-    }
-
-    @media(max-width:640px){
-      .hero h2{
-        font-size:32px;
-      }
-
-      .card{
-        padding:28px 20px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bruno Grup | Endüstriyel Espresso Kahve Makinesi Teknik Servis & Satış</title>
+<meta name="description" content="Victoria Arduino, Dalla Corte, Sanremo, La Marzocco ve 20+ marka espresso kahve makinesi yetkili teknik servisi. 7/24 hızlı destek, aynı gün yerinde servis.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.brunogrup.com/">
+<meta property="og:title" content="Bruno Grup | Endüstriyel Espresso Kahve Makinesi Teknik Servis & Satış">
+<meta property="og:description" content="Victoria Arduino, Dalla Corte, Sanremo, La Marzocco ve 20+ marka espresso kahve makinesi yetkili teknik servisi. 7/24 hızlı destek, aynı gün yerinde servis.">
+<meta property="og:url" content="https://www.brunogrup.com/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
-<div class="bg-glow"></div>
-
-<div class="container">
-  <div class="card">
-
-    <div class="logo">
-      <div class="logo-box">W</div>
-      <div class="logo-text">
-        <h1>WIX MEDYA</h1>
-        <p>Meta & Google Reklam Yönetimi</p>
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/uploads/2023/01/brunogruplogo1.png" alt="Bruno Grup"
+           onerror="this.style.display='none';this.nextSibling.style.display='block'">
+      <span class="nav-logo-text">BRUNO<span>GRUP</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+      <li><a href="hakkimizda.html" class="nav-link">Hakkımızda</a></li>
+      <li class="nav-drop">
+        <div class="nav-drop-btn">Espresso Makine Servisi <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l4 4 4-4"/></svg></div>
+        <div class="nav-drop-menu">
+          <a href="victoria-arduino.html">Victoria Arduino</a>
+          <a href="dalla-corte.html">Dalla Corte</a>
+          <a href="sanremo.html">Sanremo</a>
+          <a href="vbm.html">VBM</a>
+          <a href="wega.html">WEGA</a>
+          <a href="la-marzocco.html">La Marzocco</a>
+          <a href="la-cimbali.html">La Cimbali</a>
+          <a href="nuova-simonelli.html">Nuova Simonelli</a>
+          <a href="faema.html">Faema</a>
+          <a href="wmf.html">WMF</a>
+          <a href="astoria.html">Astoria</a>
+          <a href="casadio.html">Casadio</a>
+          <a href="di-giorgio-lab.html">Di Giorgio Lab</a>
+          <a href="bezzera.html">Bezzera</a>
+          <a href="elektra.html">Elektra</a>
+          <a href="markalar.html" style="color:#cc0000;font-weight:700;">↳ Tüm Markalar</a>
+        </div>
+      </li>
+      <li><a href="referanslar.html" class="nav-link">Referanslar</a></li>
+      <li><a href="iletisim.html" class="nav-link">İletişim</a></li>
+    </ul>
+    <a href="tel:+905343726434" class="nav-phone-link">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      0534 372 64 34
+    </a>
+    <button class="hamburger" id="hb"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="m-menu" id="mm">
+  <a href="index.html">Anasayfa</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="markalar.html">Espresso Makine Servisi</a>
+  <a href="referanslar.html">Referanslar</a>
+  <a href="iletisim.html">İletişim</a>
+  <div class="m-menu-group">Markalar</div>
+  <a href="victoria-arduino.html">Victoria Arduino</a>
+  <a href="dalla-corte.html">Dalla Corte</a>
+  <a href="sanremo.html">Sanremo</a>
+  <a href="wega.html">WEGA</a>
+  <a href="vbm.html">VBM</a>
+  <a href="la-marzocco.html">La Marzocco</a>
+  <a href="markalar.html">Tüm Markalar →</a>
+  <a href="tel:+905343726434" class="m-menu-cta">📞 0534 372 64 34</a>
+</div>
+<div class="overlay" id="ovl" onclick="closeMm()"></div>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">7/24 Teknik Destek</div>
+      <h1 class="hero-title">Endüstriyel Espresso<br>Kahve Makinesi<br><em>Satış &amp; Servisi</em></h1>
+      <p class="hero-desc">7/24 Hızlı Destek, Aynı Gün Yerinde Servis, Profesyonel Ağır Bakım, Orijinal Yedek Parça ve Ücretsiz Yedek Makine hizmeti sunuyoruz.</p>
+      <div class="hero-btns">
+        <a href="tel:+905343726434" class="btn-blk"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Hemen Ara</a>
+        <a href="https://wa.me/905343726434" target="_blank" class="btn-out"><span style="color:#25d366">●</span> WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-n">20+</div><div class="stat-l">Marka Servisi</div></div>
+        <div><div class="stat-n">7/24</div><div class="stat-l">Teknik Destek</div></div>
+        <div><div class="stat-n">20+</div><div class="stat-l">Hizmet Şehri</div></div>
       </div>
     </div>
-
-    <div class="hero">
-      <h2>Reklam Veriyor Ama <span>Sonuç Alamıyor</span> Musunuz?</h2>
-      <p>
-        İşletmenizin mevcut reklam performansını analiz ediyor, size özel reklam ve içerik stratejisi oluşturuyoruz.
-      </p>
+    <div class="hero-img reveal video-frame">
+      <video autoplay muted loop playsinline class="hero-video" poster="assets/images/uploads/2025/11/sanremo_yetkili_teknik_servis_bruno_grup_sanremo_servis_sanremo_ariza_sanremo_tamir_bruno_grup_2-1024x603.webp">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+        <img src="assets/images/uploads/2025/11/sanremo_yetkili_teknik_servis_bruno_grup_sanremo_servis_sanremo_ariza_sanremo_tamir_bruno_grup_2-1024x603.webp" alt="Espresso Kahve Makinesi Teknik Servis">
+      </video>
+      <div class="hero-img-tag">Aynı Gün<br><small>Yerinde Servis</small></div>
     </div>
+  </div>
+</section>
 
-    <div class="benefits">
-      <div class="benefit">
-        <div class="check">✓</div>
-        <span>Ücretsiz reklam performans analizi</span>
-      </div>
-
-      <div class="benefit">
-        <div class="check">✓</div>
-        <span>Doğru hedef kitle ve dönüşüm stratejisi</span>
-      </div>
-
-      <div class="benefit">
-        <div class="check">✓</div>
-        <span>Profesyonel içerik ve reklam desteği</span>
-      </div>
-
-      <div class="benefit">
-        <div class="check">✓</div>
-        <span>Performans odaklı çalışma modeli</span>
-      </div>
+<div class="strip">
+  <div class="strip-inner">
+    <span class="strip-label">Servis Markalarımız</span>
+    <div class="strip-items">
+      <span>Victoria Arduino</span><span>Dalla Corte</span><span>Sanremo</span><span>VBM</span><span>WEGA</span><span>La Marzocco</span><span>La Cimbali</span><span>Nuova Simonelli</span><span>Faema</span><span>WMF</span><span>Di Giorgio Lab</span><span>KVDW</span><span>Slayer</span><span>Rocket</span><span>ve 20+ marka</span>
     </div>
-
-    <div class="form-area">
-      <div class="form-title">Ücretsiz Ön Analiz Formu</div>
-      <div class="form-sub">
-        Kısa formu doldurun, işletmenize özel analiz ve strateji önerisi hazırlayalım.
-      </div>
-
-      <form action="https://formspree.io/f/xwvyzklv" method="POST">
-        <input type="hidden" name="_subject" value="Yeni Wix Medya Form Başvurusu">
-        <input type="hidden" name="_captcha" value="false">
-        <div class="form-group">
-          <label>İşletme Adınız</label>
-          <input type="text" name="isletme_adi" placeholder="Örn: ABC Mobilya" required>
-        </div>
-
-        <div class="form-group">
-          <label>Faaliyet Gösterdiğiniz Sektör</label>
-          <select name="sektor" required>
-            <option value="">Seçiniz</option>
-            <option>Sağlık</option>
-            <option>Güzellik Merkezi</option>
-            <option>E-Ticaret</option>
-            <option>İnşaat</option>
-            <option>Oto Servis</option>
-            <option>Emlak</option>
-            <option>Mobilya</option>
-            <option>Diğer</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Şu Anda Aktif Reklam Veriyor Musunuz?</label>
-          <select name="reklam_durumu" required>
-            <option value="">Seçiniz</option>
-            <option>Evet</option>
-            <option>Daha Önce Verdik</option>
-            <option>Hayır</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Instagram Hesabınız</label>
-          <input type="text" name="instagram" placeholder="@instagramhesabi">
-        </div>
-
-        <div class="form-group">
-          <label>E-Posta Adresiniz</label>
-          <input type="email" name="email" placeholder="ornek@mail.com" required>
-        </div>
-
-        <div class="form-group">
-          <label>Telefon Numaranız</label>
-          <input type="tel" name="telefon" placeholder="05XX XXX XX XX" required>
-        </div>
-
-        <div class="form-group">
-          <label>Kısaca Probleminizi Yazın</label>
-          <textarea name="problem" placeholder="Reklam veriyorum ama dönüşüm alamıyorum..."></textarea>
-        </div>
-
-        <button class="btn" type="submit">Ücretsiz Analiz Başvurusu Yap</button>
-      </form>
-
-      <div class="footer-note">
-        Başvuru sonrası ekibimiz işletmenizi analiz ederek sizinle iletişime geçecektir.
-      </div>
-    </div>
-
   </div>
 </div>
 
+<section class="services">
+  <div class="services-inner">
+    <div class="sec-label reveal">Hizmetlerimiz</div>
+    <h2 class="sec-title reveal">İşletmeniz İçin Her Şey</h2>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="svc-title">Teknik Servis &amp; Onarım</div>
+        <p class="svc-desc">Tüm marka ve modellerde arıza tespiti, onarım ve yedek parça değişimi. Orijinal parça garantisi.</p>
+        <a href="iletisim.html" class="svc-more">Servis Al →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="svc-title">Profesyonel Ağır Bakım</div>
+        <p class="svc-desc">Kimyasal kullanmadan kireç temizliği, pompa kontrolü, grup başı bakımı ve kalibrasyon hizmeti.</p>
+        <a href="iletisim.html" class="svc-more">Randevu Al →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="svc-title">Aynı Gün Servis</div>
+        <p class="svc-desc">Sabah arayın, öğleden sonra teknisyenimiz yerinde. 20+ şehirde hızlı servis ağımız.</p>
+        <a href="tel:+905343726434" class="svc-more">Hemen Ara →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div class="svc-title">Satış &amp; Danışmanlık</div>
+        <p class="svc-desc">İşletmenize en uygun espresso makinesini birlikte seçelim. Uzman tavsiye ve kurulum desteği.</p>
+        <a href="iletisim.html" class="svc-more">Teklif Al →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="svc-title">İşletme Kurulumu</div>
+        <p class="svc-desc">Kafe, restoran ve bar kurulumunda A'dan Z'ye danışmanlık. Elektrik, su ve ekipman kurulumu.</p>
+        <a href="iletisim.html" class="svc-more">Bilgi Al →</a>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
+        <div class="svc-title">Ücretsiz Yedek Makine</div>
+        <p class="svc-desc">Makineniz bakımdayken işletmeniz durmasın. Servis süresince yedek makine tamamen ücretsiz.</p>
+        <a href="iletisim.html" class="svc-more">Detaylar →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff;border-bottom:2px solid var(--black);">
+  <div style="max-width:1200px;margin:0 auto;padding:60px var(--pad) 0;">
+    <div class="sec-label reveal">Yetkili Servis</div>
+    <h2 class="sec-title reveal">Servis Verdiğimiz Markalar</h2>
+  </div>
+  <div class="home-brands">
+    <div class="hb-item">
+      <div class="hb-img">
+        <video autoplay muted loop playsinline class="brand-video" style="width:100%;height:100%;object-fit:cover;display:block;" poster="assets/images/uploads/2024/08/bruno-grup-teknik-servis-hizmetleri-1-2048x1365.jpg">
+          <source src="assets/videos/victoria-arduino.mp4" type="video/mp4">
+          <img src="assets/images/uploads/2024/08/bruno-grup-teknik-servis-hizmetleri-1-2048x1365.jpg" alt="Victoria Arduino Espresso Makinesi">
+        </video>
+      </div>
+      <div class="hb-text reveal"><span class="hb-badge">Yetkili Servis</span><h3 class="hb-title">Victoria Arduino Teknik Servis</h3><p class="hb-desc">Victoria Arduino espresso kahve makinelerinin kurulumu, bakımı ve onarımı konusunda hızlı, güvenilir ve parça garantili servis hizmeti sunuyoruz.</p><a href="victoria-arduino.html" class="hb-link">Detaylı Bilgi →</a></div>
+    </div>
+    <div class="hb-item rev">
+      <div class="hb-img">
+        <video autoplay muted loop playsinline class="brand-video" style="width:100%;height:100%;object-fit:cover;display:block;" poster="assets/images/uploads/2025/11/sanremo_yetkil_teknik_servis_bruno_grup_sanremo_servis_sanremo_ariza_sanremo_tamir_bruno_grup_4-1024x576.jpg">
+          <source src="assets/videos/sanremo.mp4" type="video/mp4">
+          <img src="assets/images/uploads/2025/11/sanremo_yetkil_teknik_servis_bruno_grup_sanremo_servis_sanremo_ariza_sanremo_tamir_bruno_grup_4-1024x576.jpg" alt="Sanremo Espresso Makinesi">
+        </video>
+      </div>
+      <div class="hb-text reveal"><span class="hb-badge">Yetkili Servis</span><h3 class="hb-title">Sanremo Yetkili Teknik Servis</h3><p class="hb-desc">Sanremo yetkili teknik servis olarak espresso kahve makinelerinin bakım ve onarım hizmetinde hızlı, güvenilir çözümler sunuyoruz.</p><a href="sanremo.html" class="hb-link">Detaylı Bilgi →</a></div>
+    </div>
+    <div class="hb-item">
+      <div class="hb-img">
+        <video autoplay muted loop playsinline class="brand-video" style="width:100%;height:100%;object-fit:cover;display:block;" poster="assets/images/uploads/2025/11/vbm_yetkil_teknik_servis_bruno_grup_vbm_servis_vbm_ariza_vbm_tamir_bruno_grup.jpg">
+          <source src="assets/videos/vbm.mp4" type="video/mp4">
+          <img src="assets/images/uploads/2025/11/vbm_yetkil_teknik_servis_bruno_grup_vbm_servis_vbm_ariza_vbm_tamir_bruno_grup.jpg" alt="VBM Espresso Makinesi">
+        </video>
+      </div>
+      <div class="hb-text reveal"><span class="hb-badge">Yetkili Servis</span><h3 class="hb-title">VBM Yetkili Teknik Servis</h3><p class="hb-desc">VBM espresso kahve makinesi kurulum, bakım ve onarımında yetkili teknik servisimiz ile hızlı, güvenilir, parça garantili servis sunuyoruz.</p><a href="vbm.html" class="hb-link">Detaylı Bilgi →</a></div>
+    </div>
+    <div class="hb-item rev">
+      <div class="hb-img">
+        <video autoplay muted loop playsinline class="brand-video" style="width:100%;height:100%;object-fit:cover;display:block;" poster="assets/images/uploads/2025/12/wega_yetkili_teknik_servis_bruno_grup_wega_servis_wega_ariza_wega_tamir_bruno_grup_1.jpg-1024x768.webp">
+          <source src="assets/videos/wega.mp4" type="video/mp4">
+          <img src="assets/images/uploads/2025/12/wega_yetkili_teknik_servis_bruno_grup_wega_servis_wega_ariza_wega_tamir_bruno_grup_1.jpg-1024x768.webp" alt="WEGA Espresso Makinesi">
+        </video>
+      </div>
+      <div class="hb-text reveal"><span class="hb-badge">Yetkili Servis</span><h3 class="hb-title">WEGA Yetkili Teknik Servis</h3><p class="hb-desc">WEGA yetkili teknik servisimizce espresso kahve makinelerinin kurulumu, bakımı ve onarımı konusunda hızlı ve güvenilir servis hizmeti sunuyoruz.</p><a href="wega.html" class="hb-link">Detaylı Bilgi →</a></div>
+    </div>
+    <div style="text-align:center;padding:40px;border-top:2px solid var(--black);background:var(--bg2);">
+      <a href="markalar.html" class="btn-blk">Tüm Markaları Gör →</a>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="why-inner">
+    <div class="why-img-wrap reveal video-frame">
+      <video autoplay muted loop playsinline class="why-video" poster="assets/images/uploads/2024/08/bruno-grup-teknik-servis-hizmetleri-1-2048x1365.jpg">
+        <source src="assets/videos/brand.mp4" type="video/mp4">
+        <img src="assets/images/uploads/2024/08/bruno-grup-teknik-servis-hizmetleri-1-2048x1365.jpg" alt="Bruno Grup Teknik Servis">
+      </video>
+      <div class="why-badge">7/24<small>Hizmetinizdeyiz</small></div>
+    </div>
+    <div class="reveal">
+      <div class="sec-label">Neden Bruno Grup</div>
+      <h2 class="sec-title">İşletmeniz Asla Durmasın</h2>
+      <p style="font-size:14px;color:var(--gray);line-height:1.85;">Her dakikanın para ettiği profesyonel mutfaklarda en hızlı ve güvenilir teknik servis bizde.</p>
+      <div class="why-items">
+        <div class="why-item"><div class="why-check">✓</div><div><div class="why-t">Aynı Gün Yerinde Servis</div><p class="why-d">Sabah arayın, öğleden sonra teknisyenimiz yerinde. Acil durumlarda işletmeniz kapanmaz.</p></div></div>
+        <div class="why-item"><div class="why-check">✓</div><div><div class="why-t">Orijinal Yedek Parça</div><p class="why-d">Sahte parça kullanmıyoruz. Tüm yedek parçalar orijinal ve garantili.</p></div></div>
+        <div class="why-item"><div class="why-check">✓</div><div><div class="why-t">Ücretsiz Yedek Makine</div><p class="why-d">Makineniz bakımdayken işletmeniz çalışmaya devam etsin. Yedek makine ücretsiz.</p></div></div>
+        <div class="why-item"><div class="why-check">✓</div><div><div class="why-t">20+ Şehirde Hizmet</div><p class="why-d">İzmir, İstanbul, Ankara, Bursa, Antalya ve daha birçok şehirde hızlı servis ağı.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="cities">
+  <div class="cities-inner">
+    <div class="cities-lbl">Hizmet Verdiğimiz Şehirler</div>
+    <div class="cities-txt">İzmir · Manisa · Balıkesir · Bursa · Adapazarı · Sakarya · Bolu · Çanakkale · Aydın · Muğla · Denizli · Konya · Kütahya · Afyonkarahisar · Uşak · Burdur · Isparta · Antalya · Eskişehir · Ankara</div>
+  </div>
+</div>
+
+<section class="contact">
+  <div class="contact-inner">
+    <div class="reveal">
+      <div class="sec-label">İletişim</div>
+      <h2 class="sec-title">Hemen Ulaşın</h2>
+      <div class="contact-cards">
+        <div class="ccard"><div class="ccard-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><strong>Telefon</strong><a href="tel:+905343726434">+90 534 372 64 34</a></div></div>
+        <div class="ccard"><div class="ccard-icon" style="background:#25d366"><svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><strong>WhatsApp</strong><a href="https://wa.me/905343726434" target="_blank" style="color:#25d366">+90 534 372 64 34</a></div></div>
+        <div class="ccard"><div class="ccard-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Adres</strong><span>Soğukkuyu Mah. 1595 Sok. No:18A Bayraklı, İZMİR</span></div></div>
+        <div class="ccard"><div class="ccard-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><strong>Çalışma Saatleri</strong><span>7/24 Teknik Destek</span></div></div>
+      </div>
+    </div>
+    <div class="reveal"><form class="form" onsubmit="return false;">
+  <div class="form-row">
+    <div class="fg"><label>Ad Soyad</label><input type="text" placeholder="Adınız Soyadınız"></div>
+    <div class="fg"><label>Telefon</label><input type="tel" placeholder="05XX XXX XX XX"></div>
+  </div>
+  <div class="fg"><label>Makine Markası</label>
+    <select><option value="">Seçiniz…</option>
+      <option>Victoria Arduino</option><option>Dalla Corte</option><option>Sanremo</option>
+      <option>VBM</option><option>WEGA</option><option>La Marzocco</option>
+      <option>La Cimbali</option><option>Nuova Simonelli</option><option>Faema</option>
+      <option>WMF</option><option>Astoria</option><option>Casadio</option>
+      <option>Bezzera</option><option>Elektra</option><option>Slayer</option>
+      <option>Di Giorgio Lab</option><option>XLVI</option><option>Empero</option>
+      <option>Saeco</option><option>Kalerm</option><option>Mypresso</option>
+      <option>İdose</option><option>Tempesta</option><option>KVDW</option>
+      <option>Rocket</option><option>Rex Royal</option><option>Ascaso</option>
+      <option>Rancilio</option><option>Diğer</option>
+    </select>
+  </div>
+  <div class="fg"><label>Hizmet Türü</label>
+    <select><option value="">Seçiniz…</option>
+      <option>Arıza / Onarım</option><option>Profesyonel Ağır Bakım</option>
+      <option>Makine Satın Alma</option><option>Yeni İşletme Kurulumu</option><option>Diğer</option>
+    </select>
+  </div>
+  <div class="fg"><label>Mesajınız</label><textarea placeholder="Sorununuzu kısaca anlatın…"></textarea></div>
+  <button type="submit" class="form-btn">Gönder →</button>
+</form></div>
+  </div>
+</section>
+
+<!-- Floating -->
+<a href="https://wa.me/905343726434" target="_blank" class="wa-btn" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a href="tel:+905343726434" class="ph-btn" aria-label="Ara">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/images/uploads/2023/01/brunogruplogo1.png" alt="Bruno Grup"
+               onerror="this.style.display='none';this.nextSibling.style.display='block'">
+          <span class="footer-logo-text">BRUNO<span>GRUP</span></span>
+        </div>
+        <p class="footer-desc">Endüstriyel espresso kahve makinelerinde 20+ marka yetkili teknik servis. 7/24 destek, aynı gün yerinde servis. Tüm Türkiye.</p>
+      </div>
+      <div>
+        <div class="footer-ttl">Hizmetler</div>
+        <ul class="footer-ul">
+          <li><a href="iletisim.html">Teknik Servis & Onarım</a></li>
+          <li><a href="iletisim.html">Profesyonel Ağır Bakım</a></li>
+          <li><a href="iletisim.html">Makine Satışı</a></li>
+          <li><a href="iletisim.html">İşletme Kurulumu</a></li>
+          <li><a href="iletisim.html">Ücretsiz Yedek Makine</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-ttl">Markalar</div>
+        <ul class="footer-ul">
+          <li><a href="victoria-arduino.html">Victoria Arduino</a></li>
+          <li><a href="dalla-corte.html">Dalla Corte</a></li>
+          <li><a href="sanremo.html">Sanremo</a></li>
+          <li><a href="wega.html">WEGA</a></li>
+          <li><a href="la-marzocco.html">La Marzocco</a></li>
+          <li><a href="markalar.html">Tüm Markalar →</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-ttl">İletişim</div>
+        <ul class="footer-ul">
+          <li><a href="tel:+905343726434">0534 372 64 34</a></li>
+          <li><a href="https://wa.me/905343726434" target="_blank">WhatsApp</a></li>
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="referanslar.html">Referanslar</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span class="footer-copy">© 2025 Bruno Grup. Tüm hakları saklıdır.</span>
+      <span class="footer-dev"><a href="https://www.wixmedya.com" target="_blank">Web Tasarım: www.wixmedya.com</a></span>
+    </div>
+  </div>
+</footer>
 <script>
-document.querySelector('form').addEventListener('submit', function() {
-  setTimeout(() => {
-    alert('Başvurunuz başarıyla gönderildi!');
-  }, 500);
-});
+const hb=document.getElementById('hb'),mm=document.getElementById('mm'),ovl=document.getElementById('ovl');
+function openMm(){hb.classList.add('open');mm.classList.add('open');ovl.classList.add('show');document.body.style.overflow='hidden';}
+function closeMm(){hb.classList.remove('open');mm.classList.remove('open');ovl.classList.remove('show');document.body.style.overflow='';}
+hb.addEventListener('click',()=>mm.classList.contains('open')?closeMm():openMm());
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
